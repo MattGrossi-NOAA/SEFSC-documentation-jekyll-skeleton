@@ -136,9 +136,9 @@ description: "A Jekyll-based documentation theme for data management documentati
 # If you're using disqus for comments, add the shortname here. If not, leave this value blank.
 
 
-###############################################################################################################################
+#########################################################################################################################
 # SEFSC EDIT HERE! Added settings for SEFSC (replace 'sefsc-documentation-jekyll-skeleton' with your GitHub repo name): #
-###############################################################################################################################
+#########################################################################################################################
 # url/baseurl: modify baseurl so that url + baseurl combine to point to the full GitHub repo URL the site will be served from (replace 'your-documentation-repo-name')
 # repository: modify to point to the GitHub repo shorthand name (replace 'your-documentation-repo-name')
 # github_editme_path: provide the basepath to the branch containing source files for this site (replace 'your-documentation-repo-name').  'blob/gh-pages/_docs' is standard and should remain as is
@@ -158,7 +158,7 @@ repository               : "MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton"
 github_editme_path       : "MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton/blob/gh-pages/_docs"
 
 
-# Setup/config for 'sefsc_fates_documentation_theme_jekyll' git submodule (do not alter):
+# Setup/config for 'sefsc_documentation_theme_jekyll' git submodule (do not alter):
 source                   : .
 destination              : _site
 plugins_dir              : theme/_plugins
