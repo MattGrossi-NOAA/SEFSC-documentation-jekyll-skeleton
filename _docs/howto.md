@@ -57,7 +57,7 @@ An *orphan branch* in GitHub is a branch whose commit history is independent of 
    git remote set-url origin https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton.git
    ```
 
-   Note: To find this new URL, navigate to the [SEFSC-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton/) repo in a web browser and click on the green "< > Code" button.
+   Note: To find this new URL, navigate to the [SEFSC-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton/){:target="_blank" rel="noopener"} repo in a web browser and click on the green "< > Code" button.
 
 4. Make sure you're on your *local* **gh-pages** branch and then pull the contents of the **gh-pages** branch of *SEFSC-documentation-jekyll-skeleton* repo
 
@@ -88,7 +88,7 @@ An *orphan branch* in GitHub is a branch whose commit history is independent of 
 
 9. Under "Branch", select "gh-pages" from the dropdown menu. Leave the directory as "/(root)" and click "Save".
 
-10. At the top of this page, you should see a banner saying "Your site is now live at..." with the URL of your documentation page. Launch the page to be sure. It should look exactly like the SEFSC-documentation-jekyll-skeleton page but with a URL unique to your project.
+10. At the top of this page, you should see a banner saying "Your site is now live at..." with the URL of your documentation page. Launch the page to be sure. It should look exactly like the [SEFSC-documentation-jekyll-skeleton page](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton/){:target="_blank" rel="noopener"} but with a URL pointing to your project.
 
 You should now have at least two local branches: the **gh-pages** branch you just created, and whatever branch(es) you had originally (*e.g.*, **main**, **master**, *etc.*). Verify using `git branch --all`. Likewise, your remote repository should now have a new **gh-pages** branch as well as the original branches, and it should contain a copy of the SEFSC documentation template files and subdirectories.
 
