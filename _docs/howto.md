@@ -82,6 +82,14 @@ An *orphan branch* in GitHub is a branch whose commit history is independent of 
    git push origin gh-pages
    ```
 
+7. In a web browser, navigate to the repo to which you just added a **gh-pages** branch. Click the "Settings" tab, then "Pages" on left sidebar.
+
+8. In the "Build and deployment" section, under "Source", select "Deploy from branch" from the dropdown menu. *Note: If your repo belongs to you (as opposed to belonging to an organization), it must be a public repo for this be available.*
+
+9. Under "Branch", select "gh-pages" from the dropdown menu. Leave the directory as "/(root)" and click "Save".
+
+10. At the top of this page, you should see a banner saying "Your site is now live at..." with the URL of your documentation page. Launch the page to be sure. It should look exactly like the SEFSC-documentation-jekyll-skeleton page but with a URL unique to your project.
+
 You should now have at least two local branches: the **gh-pages** branch you just created, and whatever branch(es) you had originally (*e.g.*, **main**, **master**, *etc.*). Verify using `git branch --all`. Likewise, your remote repository should now have a new **gh-pages** branch as well as the original branches, and it should contain a copy of the SEFSC documentation template files and subdirectories.
 
 Use `git checkout <branch-name>` to switch between branches. Everything that follows involves this new **gh-pages** branch.
