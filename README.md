@@ -1,1 +1,1 @@
-# SEFSC-FATES-documentation-jekyll-skeleton
+# SEFSC-documentation-jekyll-skeleton
