@@ -19,7 +19,9 @@ The instructions below will allow you to create a new GitHub Pages site that fol
 
 ## Getting Started
 
-### Step 1: Use the SEFSC-documentation-jekyll-skeleton template to create your own forked repository
+Follow [Step 1a](#step-1a-use-the-sefsc-documentation-jekyll-skeleton-template-to-create-your-own-forked-repository) below if you do not yet have a GitHub repository and would like to start a new one with gh-pages. If you already have a repository to which you would like to add a new gh-pages branch with the SEFSC documentation template, start with [Step 1b](#step-1b-add-a-new-orphan-branch-to-the-existing-repository).
+
+### Step 1a: Use the SEFSC-documentation-jekyll-skeleton template to create your own forked repository
 
 This is done on the GitHub website.  These steps assume you already have a GitHub account in place.
 
@@ -28,6 +30,61 @@ This is done on the GitHub website.  These steps assume you already have a GitHu
 1. Select the repository owner (your own account or a GitHub organization you have write permissions to) and type a name for the repository. If the new repository is for SEFSC-related work, the repository name should adhere to the SEFSC repository naming convention as depicted in the [SEFSC GitHub SOP](https://github.com/SEFSC/SEFSC-Resources/blob/18a6c7e98b3e9b71f5e5912282d9d7f08c0e0a1a/SEFSC%20GitHub%20SOP%20and%20User%20Agreement%20Form/SEFSC%20Github%20SOP%20-%20RR%20-%20LON%20-%20BGM.pdf){:target="_blank" rel="noopener"}. Select other options as appropriate. At the end of this step, you should have a new repository available at the following URL: https://github.com/owner/my-new-documentation-repo. ![GitHub new repo image](https://ioos.github.io/new-repo.png){:style="width: 600px; display:block; border: 1px solid"}
 
 1. From your new repository page, download or "clone" the repository to edit it locally using Jekyll/Ruby.  The local editing process assumes you have a git client installed in order to push your edited files back to GitHub, and that you're able to install the dependencies to run Jekyll (Ruby programming language).  For those who do not have git, or cannot run Ruby, editing can be accomplished on the GitHub website one file at a time (see [Step 2: Edit your documentation site content](#step-2-edit-your-documentation-site-content) below for details).  ![GitHub clone example image](https://ioos.github.io/clone.png){:style="width: 350px; display:block; border: 1px solid"}
+
+### Step 1b: Add a new orphan branch to the existing repository
+
+An *orphan branch* in GitHub is a branch whose commit history is independent of all other branches in the repo. This is useful for gh-pages because we can keep the website files separate from any project code and can work on either the website or the project code independently from each other without GitHub wanting to merge changes across branches. GitHub Pages are customarily saved in branches named "gh-pages".
+
+1. Navigate to your local copy of the repository
+
+2. Create a new orphan branch and remove the git commit history that is automatically generated. (Note: There may or may not be a ".gitignore" file to delete. If not, do not worry.)
+
+   ```
+   git checkout --orphan gh-pages
+   git rm -rf .
+   rm .gitignore
+   ```
+
+3. We need to temporarily set the remote origin to the SEFSC documentation repo. First, note the existing remote origin URL so that we can restore it later. It can be retieved with the command:
+
+   ```
+   git remote -v
+   ```
+  
+   Then change the remote URL to the documentation repo:
+
+   ```
+   git remote set-url origin https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton.git
+   ```
+
+   Note: To find this new URL, navigate to the [SEFSC-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton/) repo in a web browser and click on the green "< > Code" button.
+
+4. Make sure you're on your *local* **gh-pages** branch and then pull the contents of the **gh-pages** branch of *SEFSC-documentation-jekyll-skeleton* repo
+
+   ```
+   git checkout gh-pages
+   git pull origin gh-pages
+   ```
+   
+   Use `ls -la` to verify that you now have all of the files and directories from the skeleton repo.
+
+5. Change the local remote origin back to the original repo
+
+   ```
+   git remote set-url origin <old-url>
+   ```
+   
+   where \<old-url> is the URL of the original repo retrieved in [Step 1b](#step-1b-add-a-new-orphan-branch-to-the-existing-repository).3.
+
+6. Push this new branch to the remote repo
+
+   ```
+   git push origin gh-pages
+   ```
+
+You should now have at least two local branches: the **gh-pages** branch you just created, and whatever branch(es) you had originally (*e.g.*, **main**, **master**, *etc.*). Verify using `git branch --all`. Likewise, your remote repository should now have a new **gh-pages** branch as well as the original branches, and it should contain a copy of the SEFSC documentation template files and subdirectories.
+
+Use `git checkout <branch-name>` to switch between branches. Everything that follows involves this new **gh-pages** branch.
 
 
 
@@ -80,6 +137,7 @@ When you are setting up a new documentation site initially, you will likely want
 3. Make all changes, preview them to make sure that everything is okay, and commit them to the "gh-pages" (make sure that the "Commit directly to the gh-pages branch" option is checked).
 
 A visual walkthrough of this process is also available in the [Editing Markdown Files for GitHub Pages](https://docs.google.com/presentation/d/1OBZumh-vK3tynt90_2GH_Xdp1LVuI-wao70FVzGp3Vg/edit#slide=id.p){:target="_blank" rel="noopener"} Google Slides presentation.
+
 
 
 ## Editing and configuring your documentation site
@@ -244,7 +302,8 @@ There should not be any need to modify code in either of the submodules manually
 
 ## FAQ
 
-### The theme isn't rendering properly when deployed to the web.
-If it looks something like:
+### 1. Why is the theme not rendering properly when deployed to the web?
+If the page looks something like:
+
 ![screenshot](https://user-images.githubusercontent.com/8480023/260767152-435696ce-fd9e-4b76-86e5-dc84be85e577.png)
-   * Check that `_config.yml` and `_config_dev.yml` are pointing to the right repository. See this rull request as an example https://github.com/ioos/glider-dac/pull/216/files.
+   * Check that `_config.yml` and `_config_dev.yml` are pointing to the right repository. This can happen if URLs are incorrect. See [this pull request](https://github.com/ioos/glider-dac/pull/216/files){:target="_blank" rel="noopener"} as an example.
