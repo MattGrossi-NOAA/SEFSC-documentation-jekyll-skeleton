@@ -28,9 +28,9 @@ This is done on the GitHub website.  These steps assume you already have a GitHu
 
 1. Browse to the [SEFSC-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton){:target="_blank" rel="noopener"} repository, select the "Use this template" button, and select "Create a new repository": ![GitHub use template image](https://ioos.github.io/use-template.png){:style="display:block; border: 1px solid"}
 
-1. Select the repository owner (your own account or a GitHub organization you have write permissions to) and type a name for the repository. If the new repository is for SEFSC-related work, the repository name should adhere to the SEFSC repository naming convention as depicted in the [SEFSC GitHub SOP](https://github.com/SEFSC/SEFSC-Resources/blob/18a6c7e98b3e9b71f5e5912282d9d7f08c0e0a1a/SEFSC%20GitHub%20SOP%20and%20User%20Agreement%20Form/SEFSC%20Github%20SOP%20-%20RR%20-%20LON%20-%20BGM.pdf){:target="_blank" rel="noopener"}. Select other options as appropriate. At the end of this step, you should have a new repository available at the following URL: https://github.com/owner/my-new-documentation-repo. ![GitHub new repo image](https://ioos.github.io/new-repo.png){:style="width: 600px; display:block; border: 1px solid"}
+2. Select the repository owner (your own account or a GitHub organization you have write permissions to) and type a name for the repository. If the new repository is for SEFSC-related work, the repository name should adhere to the SEFSC repository naming convention as depicted in the [SEFSC GitHub SOP](https://github.com/SEFSC/SEFSC-Resources/blob/18a6c7e98b3e9b71f5e5912282d9d7f08c0e0a1a/SEFSC%20GitHub%20SOP%20and%20User%20Agreement%20Form/SEFSC%20Github%20SOP%20-%20RR%20-%20LON%20-%20BGM.pdf){:target="_blank" rel="noopener"}. Select other options as appropriate. At the end of this step, you should have a new repository available at the following URL: https://github.com/owner/my-new-documentation-repo. ![GitHub new repo image](https://ioos.github.io/new-repo.png){:style="width: 600px; display:block; border: 1px solid"}
 
-1. From your new repository page, download or "clone" the repository to edit it locally using Jekyll/Ruby.  The local editing process assumes you have a git client installed in order to push your edited files back to GitHub, and that you're able to install the dependencies to run Jekyll (Ruby programming language).  For those who do not have git, or cannot run Ruby, editing can be accomplished on the GitHub website one file at a time (see [Step 2: Edit your documentation site content](#step-2-edit-your-documentation-site-content) below for details).  ![GitHub clone example image](https://ioos.github.io/clone.png){:style="width: 350px; display:block; border: 1px solid"}
+3. From your new repository page, download or "clone" the repository to edit it locally using Jekyll/Ruby.  The local editing process assumes you have a git client installed in order to push your edited files back to GitHub, and that you're able to install the dependencies to run Jekyll (Ruby programming language).  For those who do not have git, or cannot run Ruby, editing can be accomplished on the GitHub website one file at a time (see [Step 2: Edit your documentation site content](#step-2-edit-your-documentation-site-content) below for details).  ![GitHub clone example image](https://ioos.github.io/clone.png){:style="width: 350px; display:block; border: 1px solid"}
 
 ### Step 1b: Add a new orphan branch to the existing repository
 
@@ -89,7 +89,11 @@ An *orphan branch* in GitHub is a branch whose commit history is independent of 
 
 9. Under "Branch", select "gh-pages" from the dropdown menu. Leave the directory as "/(root)" and click "Save".
 
-10. At the top of this page, you should see a banner saying "Your site is now live at..." with the URL of your documentation page. Launch the page to be sure. It should look exactly like the [SEFSC-documentation-jekyll-skeleton page](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton/){:target="_blank" rel="noopener"} but with a URL pointing to your project.
+10. Still in the Settings, click "Actions" on the left sidebar, then "General".
+
+11. Under "Workflow permissions", select "Read and write permissions" to allow GitHub Actions to modify the repository.
+
+12. At the top of this page, you should see a banner saying "Your site is now live at..." with the URL of your documentation page. Launch the page to be sure. It should look exactly like the [SEFSC-documentation-jekyll-skeleton page](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton/){:target="_blank" rel="noopener"} but with a URL pointing to your project.
 
 You should now have at least two local branches: the **gh-pages** branch you just created, and whatever branch(es) you had originally (*e.g.*, **main**, **master**, *etc.*). Verify using `git branch --all`. Likewise, your remote repository should now have a new **gh-pages** branch as well as the original branches, and it should contain a copy of the SEFSC documentation template files and subdirectories.
 
@@ -225,7 +229,7 @@ In the current version of the theme, the `permalink` property value interferes w
 
 Follow the sample pattern shown in the theme, specifically looking at the Markdown sample documents in the `_docs` folder as examples.
 
-When finished editing a particular markdown page, set ```editme: false``` in the frontmatter properties to hide the "Edit me" button at the top of the page.
+When finished editing a particular markdown page, set `editme: false` in the frontmatter properties to hide the "Edit me" button at the top of the page.
 
 ### A note on submodules  
 
@@ -267,8 +271,9 @@ Changes not staged for commit:
         modified:   theme (new commits)
 ```
 
-This means you must also update the submodules to match the commit recorded in the latest commit of the superproject (i.e. the documentation repo itself).  Pull in any upstream changes to submodules by running either of the following (`--init` may be needed in some circumstances):  
+This means you must also update the submodules to match the commit recorded in the latest commit of the superproject (i.e. the documentation repo itself).  Pull in any upstream changes to submodules by running either of the following (`--init` and `--force --remote` may be needed in some circumstances):  
 ```
+git submodule update --init --force --remote
 git submodule update --init
 git submodule update
 ```
