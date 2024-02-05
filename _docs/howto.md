@@ -89,9 +89,9 @@ An *orphan branch* in GitHub is a branch whose commit history is independent of 
 
 9. Under "Branch", select "gh-pages" from the dropdown menu. Leave the directory as "/(root)" and click "Save".
 
-10. Still in the Settings, click "Actions" on the left sidebar, then "General".
+10. While still within "Settings", click "Actions" on the left sidebar, then "General".
 
-11. Under "Workflow permissions", select "Read and write permissions" to allow GitHub Actions to modify the repository.
+11. Under "Workflow permissions", select "Read and write permissions" to allow GitHub Actions to modify the repository, then click "Save".
 
 12. At the top of this page, you should see a banner saying "Your site is now live at..." with the URL of your documentation page. Launch the page to be sure. It should look exactly like the [SEFSC-documentation-jekyll-skeleton page](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton/){:target="_blank" rel="noopener"} but with a URL pointing to your project.
 
