@@ -4,6 +4,7 @@ keywords: sample homepage
 tags: [getting_started, about, overview]
 toc: false
 search: exclude
+editme: true
 #permalink: index.html
 summary: Instructions to create a new SEFSC GitHub documentation site based on the "SEFSC-documentation-jekyll-skeleton" repository.
 ---
@@ -194,20 +195,21 @@ For more details on the sidebar syntax, see [Sidebar navigation](http://idrather
 
 This theme uses a Kramdown variety of Markdown, a lightweight markup language with a plain text formatting syntax. Kramdown is a superset of Markdown that supports standard Markdown and various extensions. GitHub Pages naturally support rendering documents in Kramdown through GitHub Jekyll implementation. A detailed description of Kramdown syntax can be found by following the links in the Reference section below.
 
-Every document must start with the so-called frontmatter properties:
+Every document must start with the so-called frontmatter properties (order does not matter):
 
 ```
 ---
 title: "Some title"
-tags: [sample1, sample2]
 keywords: keyword1, keyword2, keyword3
+tags: [sample1, sample2]
 last_updated: Month day, year
-summary: "optional summary here"
 sidebar: sidebarname
 topnav: topnavname
 toc: false
 #search: exclude
 #permalink: filename.html
+editme: true
+summary: "optional summary here"
 ---
 ```
 
@@ -217,12 +219,13 @@ Values for `keywords` get populated into the metadata of the page for search eng
 
 Values for `tags` must be defined in your `_data/tags.yml` list. You also need a corresponding tag file inside the tags folder that follows the same pattern as the other tag files shown in the tags folder. (Jekyll won't auto-create these tag files.)
 
-In the current version of the theme, the `permalink` property value interferes with other collection settings; therefore it should be commented out (using a hash, #) in the frontmatter. However, it should not be removed as it may be needed in future versions.
-
 The value for `search` controls the inclusion of the document content into the theme search mechanism. If you want to be able to perform basic search through your site documents, make sure that this "exclude" property is commented out in the frontmatter.
+
+In the current version of the theme, the `permalink` property value interferes with other collection settings; therefore it should be commented out (using a hash, #) in the frontmatter. However, it should not be removed as it may be needed in future versions.
 
 Follow the sample pattern shown in the theme, specifically looking at the Markdown sample documents in the `_docs` folder as examples.
 
+When finished editing a particular markdown page, set ```editme: false``` in the frontmatter properties to hide the "Edit me" button at the top of the page.
 
 ### A note on submodules  
 

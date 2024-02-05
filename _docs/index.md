@@ -4,6 +4,7 @@ keywords: homepage
 tags: [getting_started, about, overview]
 toc: false
 #permalink: index.html
+editme: true
 summary: This is a placeholder markdown document that will render as the index.html page for the documentation site.  Replace content as desired.
 ---
 

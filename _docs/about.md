@@ -3,6 +3,7 @@ title: Creating a Jekyll documentation skeleton template for the Southeast Fishe
 summary: A technical overview of customizing the theme, creating the skeleton template, and merging the two together
 tags: [getting_started, about, overview]
 toc: false
+editme: true
 search: exclude
 ---
 
