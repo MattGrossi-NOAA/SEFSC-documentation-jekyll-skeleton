@@ -57,14 +57,38 @@ Fusce interdum et ex eget maximus. Nam rhoncus elementum facilisis. Curabitur sa
 
 ## Release Notes
 
-Version history summarizing the stages of development, enhancements, bug fixes, etc. as multiple versions are created. This section is not always relevant nor necessary, but it can be nice to see.
+Version history summarizing the stages of development, enhancements, bug fixes, etc. as multiple versions are created. This section is not always relevant nor necessary, but it can be nice to see. The collapsible bulleted list below is a suggested template.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum porta iaculis. Vestibulum semper scelerisque nunc, ac sagittis quam ornare eget. Sed massa dui, vehicula at magna non, semper porttitor dolor. Pellentesque eget augue purus. Cras quis urna iaculis, aliquam urna non, malesuada velit. Suspendisse arcu diam, fringilla in ex fringilla, ultrices pharetra orci. Phasellus leo sapien, elementum vitae tempus in, aliquet vitae leo. Cras eros urna, suscipit tincidunt mi id, dignissim eleifend ante. Etiam ullamcorper dui auctor leo dapibus, at varius lorem mattis. Morbi maximus velit id nisi luctus commodo. Mauris ut bibendum urna, vel lobortis felis. Duis convallis mauris quis finibus dignissim.
+<details>
+  <summary>
+    <b> &#9660; Version History </b>
+  </summary>
+  <ul>
+    <li> <b>Version 1.0</b> (Sep 2023): Initial version </li>
+    <li> <b>Version 1.1</b> (Mon YYYY): Revised to include:
+      <ul>
+        <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum porta iaculis. Vestibulum semper scelerisque nunc, ac sagittis quam ornare eget. Sed massa dui, vehicula at magna non, semper porttitor dolor. Pellentesque eget augue purus. </li>
+        <li> Cras quis urna iaculis, aliquam urna non, malesuada velit. Suspendisse arcu diam, fringilla in ex fringilla, ultrices pharetra orci. Phasellus leo sapien, elementum vitae tempus in, aliquet vitae leo. Cras eros urna, suscipit tincidunt mi id, dignissim eleifend ante. </li> 
+        <li> Etiam ullamcorper dui auctor leo dapibus, at varius lorem mattis. Morbi maximus velit id nisi luctus commodo. Mauris ut bibendum urna, vel lobortis felis. Duis convallis mauris quis finibus dignissim. </li>
+      </ul>
+    </li>
+    <li> <b>Version 2.0</b> (Mon YYYY): Fusce interdum et ex eget maximus. Nam rhoncus elementum facilisis. Curabitur sagittis facilisis lectus, in viverra urna fermentum id. Praesent eget est libero. Praesent accumsan sed ex id finibus. In sed augue non tortor porta tristique vitae elementum sapien. Duis enim sapien, varius non nulla sit amet, mattis pharetra tellus. Ut volutpat placerat risus vitae faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </li>
+  </ul>
+</details>
+<br>
 
-Fusce interdum et ex eget maximus. Nam rhoncus elementum facilisis. Curabitur sagittis facilisis lectus, in viverra urna fermentum id. Praesent eget est libero. Praesent accumsan sed ex id finibus. In sed augue non tortor porta tristique vitae elementum sapien. Duis enim sapien, varius non nulla sit amet, mattis pharetra tellus. Ut volutpat placerat risus vitae faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
+<!-- 
 ## Disclaimer
 
-<!-- This is required for all NOAA software and scientific products. Do not remove or edit. -->
+This is required for all NOAA software and scientific products. Do not remove or edit. -->
 
+{{site.data.alerts.important}}
+<b>Disclaimer:</b><br>
 This software is a scientific product and is not official communication of the National Oceanic and Atmospheric Administration, or the United States Department of Commerce. All NOAA software and project code is provided on an "as is" basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this software will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.
+{{site.data.alerts.end}}
+<br>
+
+<p style="text-align:right; font-size:large">
+    <a href="{{ site.url }}{{ site.baseurl }}/howto.html"> <b>Using the SEFSC theme</b> &#9654; </a>
+</p>

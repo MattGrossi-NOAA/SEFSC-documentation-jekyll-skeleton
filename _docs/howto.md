@@ -16,7 +16,7 @@ The [SEFSC-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEF
 
 The instructions below will allow you to create a new GitHub Pages site that follows the look and feel/functionality of the Jekyll documentation theme used by the [https://ioos.github.io](https://ioos.github.io){:target="_blank" rel="noopener"} site. You can then add/edit the template markdown documents with your own content.
 
-
+The theme has many additional features that have are not demonstrated nor utilized in this preview repository. Check out the [original documentation page](https://idratherbewriting.com/documentation-theme-jekyll/){:target="_blank" rel="noopener"} provided by the theme author to learn more.
 
 ## Getting Started
 
@@ -38,13 +38,15 @@ An *orphan branch* in GitHub is a branch whose commit history is independent of 
 
 1. Navigate to your local copy of the repository
 
-2. Create a new orphan branch and remove the git commit history that is automatically generated. (Note: There may or may not be a ".gitignore" file to delete. If not, do not worry.)
+2. Create a new orphan branch and remove the git commit history that is automatically generated.
 
    ```
    git checkout --orphan gh-pages
    git rm -rf .
    rm .gitignore
    ```
+  
+    {% include note.html content="There may or may not be a `.gitignore` file to delete. If not, do not worry." %}
 
 3. We need to temporarily set the remote origin to the SEFSC documentation repo. First, note the existing remote origin URL so that we can restore it later. It can be retieved with the command:
 
@@ -58,7 +60,7 @@ An *orphan branch* in GitHub is a branch whose commit history is independent of 
    git remote set-url origin https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton.git
    ```
 
-   Note: To find this new URL, navigate to the [SEFSC-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton/){:target="_blank" rel="noopener"} repo in a web browser and click on the green "< > Code" button.
+   {% include note.html content='To find this new URL, navigate to the [SEFSC-documentation-jekyll-skeleton](https://github.com/MattGrossi-NOAA/SEFSC-documentation-jekyll-skeleton/){:target="_blank" rel="noopener"} repo in a web browser and click on the green "< > Code" button.' %}
 
 4. Make sure you're on your *local* **gh-pages** branch and then pull the contents of the **gh-pages** branch of *SEFSC-documentation-jekyll-skeleton* repo
 
@@ -85,7 +87,9 @@ An *orphan branch* in GitHub is a branch whose commit history is independent of 
 
 7. In a web browser, navigate to the repo to which you just added a **gh-pages** branch. Click the "Settings" tab, then "Pages" on left sidebar.
 
-8. In the "Build and deployment" section, under "Source", select "Deploy from branch" from the dropdown menu. *Note: If your repo belongs to you (as opposed to belonging to an organization), it must be a public repo for this be available.*
+8. In the "Build and deployment" section, under "Source", select "Deploy from branch" from the dropdown menu. 
+
+   {% include note.html content = "If your repo belongs to you (as opposed to belonging to an organization), it must be a public repo for this be available." %}
 
 9. Under "Branch", select "gh-pages" from the dropdown menu. Leave the directory as "/(root)" and click "Save".
 
@@ -117,7 +121,7 @@ This approach allows instantaneous rendering of the site exactly as it will appe
 
 **Setting up the Ruby/Jekyll environment:** 
 
-Instructions are avaialable in the Jekyll Documentation Theme [Getting Started documentation](https://idratherbewriting.com/documentation-theme-jekyll/index.html){:target="_blank" rel="noopener"} - this is the upstream Jekyll theme that the SEFSC documentation theme is based on.  
+Instructions are available in the Jekyll Documentation Theme [Getting Started documentation](https://idratherbewriting.com/documentation-theme-jekyll/index.html){:target="_blank" rel="noopener"}. This is the upstream Jekyll theme that the SEFSC documentation theme is based on.  
 
 Follow these steps first to get your Jekyll environment running. In particular, use the [Option 2: Build theme with github-pages gem](https://idratherbewriting.com/documentation-theme-jekyll/index.html#option2){:target="_blank" rel="noopener"} approach to run the site, or read on to the section below.
 
@@ -323,3 +327,8 @@ If the page looks something like:
 
 ![screenshot](https://user-images.githubusercontent.com/8480023/260767152-435696ce-fd9e-4b76-86e5-dc84be85e577.png)
    * Check that `_config.yml` and `_config_dev.yml` are pointing to the right repository. This can happen if URLs are incorrect. See [this pull request](https://github.com/ioos/glider-dac/pull/216/files){:target="_blank" rel="noopener"} as an example.
+
+<br>
+<p style="text-align:right; font-size:large;">
+    <a href="{{ site.url }}{{ site.baseurl }}/about.html"> <b>Creating the SEFSC theme and template</b> &#9654; </a>
+</p>

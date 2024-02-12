@@ -216,7 +216,9 @@ First, customize the navigation bar because it will be needed later. This is the
 
 ### Step 4: Push the changes back to GitHub
 
-Once all the changes above have been made, you are ready to push them up to the remote repo on GitHub so that they will be available for use in a documentation page. (Note: This page is not a GitHub tutorial. Many resources for Git exist online, if needed.)
+Once all the changes above have been made, you are ready to push them up to the remote repo on GitHub so that they will be available for use in a documentation page.
+
+{% include tip.html content="This page is not a GitHub tutorial. Many resources for Git exist online, if needed." %}
 
 1. Add the changes to commit
 
@@ -282,7 +284,7 @@ A number of changes were made to adapt the custom IOOS theme to SEFSC. The list 
         - `.../theme/images/IOOS_Emblem_Tertiary_B_RGB.png` → `.../theme/images/NOAA_FISHERIES_logoH.png`
         - Add “NOAA Fisheries” as alternative text if header logo cannot be found
 
-    4. Add “Southeast Fisheries Science Center” text with hyperlink to header (note that this may be replaced with an image logo in the future)
+    4. Add “Southeast Fisheries Science Center” text with hyperlink to header (this may be replaced with an image logo in the future)
 
 8. Customize website colors in `.../theme/css/customstyles.css` to align with NOAA Fisheries Brand Standards
 
@@ -296,13 +298,16 @@ A number of changes were made to adapt the custom IOOS theme to SEFSC. The list 
 
 ### Step 6: Push the changes back to GitHub
 
-Follow the same procedure as in [Step 4](#step-4-push-the-changes-back-to-github) above but be sure to push to the **main** branch this time. (Note that it is best practice to make many small commits rather than fewer large commits, like this. Commit as often as you see fit while carrying out the steps above.)
+Follow the same procedure as in [Step 4](#step-4-push-the-changes-back-to-github) above but be sure to push to the **main** branch this time.
 
    ```bash
    git add .
    git commit -m "Customize theme files for SEFSC"
    git push origin main
    ```
+
+{% include tip.html content="it is best practice to make many small commits rather than fewer large commits, like this. Commit as often as you see fit while carrying out the steps above." %}
+
 ## What this theme repository provides
 The repo just created provides the layout and formatting customization that allows all documentation pages to have the same look and feel while aligning with agency visual branding requirements. This is one of the biggest advantages of using gh-pages for documentation. This repo is also key to minimizing the learning curve needed to actually create a documentation page because the creator of a new documentation page does not need to modify anything outlined above. In fact, this author *should not* make any changes to these theme files. The theme itself should be managed by a single person (or team of people) responsible for making decisions about how the pages should appear and function. And, as has been seen, everything in the repo is version controlled by virtue of being a GitHub repository.
 
@@ -577,7 +582,8 @@ We are now ready to customize the new documentation repository and make it into 
 
     10. Any comments throughout the file
 
-    Note: Do not change placeholder text such as “Insert Your Documentation Site Name”, as this will be replaced with actual content for individual documentation pages.  Commit when finished.
+    Commit when finished.
+    {% include note.html content='Do not change placeholder text such as “Insert Your Documentation Site Name”, as this will be replaced with actual content for individual documentation pages.' %}
 
 4. Update the `README.md` file. Commit when finished.
 
