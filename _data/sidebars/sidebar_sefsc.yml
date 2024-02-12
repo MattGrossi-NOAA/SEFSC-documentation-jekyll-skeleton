@@ -68,11 +68,6 @@ entries:
       url: /index.html#release-notes
       output: web
 
-# Do not remove this one!
-    - title: "Disclaimer"
-      url: /index.html#disclaimer
-      output: web
-
 # Always visible folder name that contains top-level menu items with links to 2nd document/page
   - title: "HOWTO - Using the SEFSC Jekyll Theme"
     output: web, pdf
