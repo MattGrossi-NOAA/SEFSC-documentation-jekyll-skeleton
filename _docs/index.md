@@ -90,5 +90,5 @@ This software is a scientific product and is not official communication of the N
 <br>
 
 <p style="text-align:right; font-size:large">
-    <a href="{{ site.url }}{{ site.baseurl }}/howto.html"> <b>Using the SEFSC theme</b> &#9654; </a>
+    <a style="text-decoration:none;" href="{{ site.url }}{{ site.baseurl }}/howto.html"> <b>Using the SEFSC theme</b> &#9654; </a>
 </p>

@@ -329,6 +329,9 @@ If the page looks something like:
    * Check that `_config.yml` and `_config_dev.yml` are pointing to the right repository. This can happen if URLs are incorrect. See [this pull request](https://github.com/ioos/glider-dac/pull/216/files){:target="_blank" rel="noopener"} as an example.
 
 <br>
-<p style="text-align:right; font-size:large;">
-    <a href="{{ site.url }}{{ site.baseurl }}/about.html"> <b>Creating the SEFSC theme and template</b> &#9654; </a>
+<p style="text-align:left; font-size:large;">
+    <a style="text-decoration:none;" href="{{ site.url }}{{ site.baseurl }}/index.html">  &#9664; <b>Getting started</b> </a>
+   <span style="float:right;">
+        <a style="text-decoration:none;" href="{{ site.url }}{{ site.baseurl }}/about.html"> <b>Creating the SEFSC theme and template</b> &#9654; </a>
+   </span>
 </p>

@@ -617,3 +617,7 @@ Separating the website theme files from the content repository also minimizes th
 
 We hope this page provides guidance for others within NOAA interested in creating their own template. These can either be forked from IOOS directly, as the steps describe, or from the SEFSC repos created herein. The latter may be particularly beneficial for other FMCs within NOAA Fisheries, as this SEFSC template may be closer to what such a user would want.
 
+<br>
+<p style="text-align:left; font-size:large;">
+    <a style="text-decoration:none;" href="{{ site.url }}{{ site.baseurl }}/howto.html">  &#9664; <b>Creating the SEFSC theme and template</b> </a>
+</p>
